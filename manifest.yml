@@ -1,0 +1,28 @@
+applications:
+- name: politicaltrends
+  memory: 256M
+# This is command provided by cf -c option  
+  command: bash ./run.sh
+#  command: python manage.py migrate --noinput; gunicorn MyFirstDjango.wsgi --workers 2 -b 0.0.0.0:$PORT
+#  command: python manage.py runserver $PORT
+#  command: python -c "import os; print os.getcwd()"
+#  New Buildpack: https://developer.ibm.com/answers/questions/8782/about-deploying-python-applications/?community=bluemix
+#  buildpack: https://github.com/ephoning/heroku-buildpack-python.git
+#  buildpack: https://github.com/cloudfoundry/python-buildpack  # Use to work doesn't now
+  buildpack: https://github.com/cloudfoundry/python-buildpack
+  path: .
+declared-services:
+#  postgredb:
+#    label: postgresql
+#    plan: 100
+  mongodb1:
+    label: mongodb
+    plan: 100
+  alchemyapi:
+    label: alchemyapi
+    plan: 100    
+services:
+#  - postgredb
+  - mongodb1
+  - alchemyapi
+  
