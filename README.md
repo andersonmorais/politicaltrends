@@ -1,7 +1,7 @@
 #PoliticalTrends
 
 This Application allows you to get an overall Political Insight from published texts/articles which contains politics context.
-The App makes use of IBM Watson AlchemyAPI to extract semantic information about key persons and to obtain the respective subjective opinion and thoughts from the identified politician.
+The App makes use of IBM Watson AlchemyAPI to extract semantic information about key persons and to obtain the respective subjective opinion from the identified politician.
 
 ## Publish the App on Bluemix using CF CLI
 
