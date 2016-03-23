@@ -16,7 +16,7 @@ The App makes use of IBM Watson AlchemyAPI to extract semantic information about
 3. Create the MongoDB Databse Service on Bluemix
 
   ```sh
-  $ cf create-service mongodb "100" mongodb1"
+  $ cf create-service mongodb "100" mongodb1
   ```
 
 4. Publish the app on Bluemix.
@@ -24,7 +24,7 @@ The App makes use of IBM Watson AlchemyAPI to extract semantic information about
   ```sh
   $ git clone https://github.com/andersonmorais/politicaltrends.git
   $ cd politicaltrends
-  $ cf push  --no-start
+  $ cf push --no-start
   ```
 
 5. Start the app.
