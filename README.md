@@ -38,10 +38,11 @@ The App makes use of IBM Watson AlchemyAPI to extract semantic information about
   ```sh
   http://politicaltrends.mybluemix.net/
   ```
+  
 ## License
 
   This sample code is licensed under Apache 2.0. Full license text is available in [LICENSE][License].
 
 [cloud_foundry]: https://github.com/cloudfoundry/cli
 [getting_started]: https://console.ng.bluemix.net/solutions/web-applications
-[License] https://www.apache.org/licenses/LICENSE-2.0.txt
+[License]: https://www.apache.org/licenses/LICENSE-2.0.txt
