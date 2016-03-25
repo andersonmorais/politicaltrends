@@ -22,7 +22,7 @@ def index(request):
     context = RequestContext(request)
     return HttpResponse(template.render(context))
 
-# Fetching data for a country/metric
+# Fetching data for a url/text
 def get_and_return_results(request):
     
     #TODO - Implement db caching per user-session
