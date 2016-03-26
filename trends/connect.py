@@ -19,20 +19,20 @@ def refresh():
 def get_trend_data(url, text):
     # If data is in cache, return it
     if text is None:
-        cursor = db.collection.find({"url": url})
-        if not cursor:
+        cursor = db.collection.find_one({"url": url})
+        if cursor:
             #print("[DEBUG]: get_trend_data1: cursor {1}")
             #for document in cursor:
             #    print(document)
-            return db.collection.find({"url": url})["trends"]
+            return db.collection.find_one({"url": url})["trends"]
         # Data is not on cache
         else:
             #print("[DEBUG]: get_trend_data2: cursor {1}")
             return False
     if url is None:
-        cursor = db.collection.find({"text": text})
-        if not cursor:
-            return db.collection.find({"text": text})["trends"]
+        cursor = db.collection.find_one({"text": text})
+        if cursor:
+            return db.collection.find_one({"text": text})["trends"]
         # Data is not on cache
         else:
             return False  
